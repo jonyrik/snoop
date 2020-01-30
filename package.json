@@ -1,0 +1,14 @@
+{
+  "name": "ejercicio.snoop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "sass": "sass --watch scss:css",
+    "watch": "yarn run sass --watch"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "sass": "^1.17.4",
+    "swiper": "^5.3.0"
+  }
+}

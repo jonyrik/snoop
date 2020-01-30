@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Roboto+Condensed:400,700&display=swap');
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-family: 'PT Serif', serif;
+}
+
+:focus {
+  outline: none;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "layout";
+
+@import "components/slider";
+@import "components/carousel";
+@import "components/nav";

@@ -1,0 +1,188 @@
+.swiper-container-slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: 576px) {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .swiper-slide {
+
+    &[data-swiper-slide-index="0"] {
+
+      .img {
+        background-color: red;
+      }
+      .caption {
+
+        @media (min-width: 576px) {
+          background: -moz-linear-gradient(left,  rgba(255,0,0,1) 0%, rgba(255,0,0,0) 66%, rgba(255,0,0,0) 100%);
+          background: -webkit-linear-gradient(left,  rgba(255,0,0,1) 0%,rgba(255,0,0,0) 66%,rgba(255,0,0,0) 100%);
+          background: linear-gradient(to right,  rgba(255,0,0,1) 0%,rgba(255,0,0,0) 66%,rgba(255,0,0,0) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0000', endColorstr='#00ff0000',GradientType=1 );
+        }
+      }
+    }
+    &[data-swiper-slide-index="1"] {
+
+      .img {
+        background-color: green;
+      }
+      .caption {
+
+        @media (min-width: 576px) {
+          background: -moz-linear-gradient(left,  rgba(0,128,0,1) 0%, rgba(0,128,0,0) 66%, rgba(0,128,0,0) 100%);
+          background: -webkit-linear-gradient(left,  rgba(0,128,0,1) 0%,rgba(0,128,0,0) 66%,rgba(0,128,0,0) 100%);
+          background: linear-gradient(to right,  rgba(0,128,0,1) 0%,rgba(0,128,0,0) 66%,rgba(0,128,0,0) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008000', endColorstr='#00008000',GradientType=1 );
+        }
+      }
+    }
+    &[data-swiper-slide-index="2"] {
+
+      .img {
+        background-color: blue;
+      }
+      .caption {
+
+        @media (min-width: 576px) {
+          background: -moz-linear-gradient(left,  rgba(0,0,255,1) 0%, rgba(0,0,255,0) 66%, rgba(0,0,255,0) 100%);
+          background: -webkit-linear-gradient(left,  rgba(0,0,255,1) 0%,rgba(0,0,255,0) 66%,rgba(0,0,255,0) 100%);
+          background: linear-gradient(to right,  rgba(0,0,255,1) 0%,rgba(0,0,255,0) 66%,rgba(0,0,255,0) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000ff', endColorstr='#000000ff',GradientType=1 );
+        }
+      }
+    }
+
+    .img {
+      min-height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      background-position: 10%;
+      background-color: red;
+
+      @media (min-width: 576px) {
+        min-height: calc(100vh - 80px);
+        height: calc(100vh - 80px);
+      }
+
+      img {
+        mix-blend-mode: multiply;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    .caption {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80%;
+
+      .box {
+        position: absolute;
+        background: white;
+        bottom: 0;
+        z-index: 20;
+        padding: 15px;
+        max-width: 200px;
+        top: auto;
+        left: 20px;
+
+        @media (min-width: 576px) {
+          position: relative;
+          max-width: 340px;
+          top: 160px;
+          left: 150px;
+          padding: 30px 20px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: black;
+          width: 16px;
+          height: 16px;
+
+          @media (min-width: 576px) {
+            display: none;
+          }
+        }
+
+        h1 {
+          color: red;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+
+          @media (min-width: 576px) {
+            font-size: 28px;
+          }
+        }
+        h2 {
+          font-size: 14px;
+          font-weight: 700;
+          font-style: italic;
+          line-height: 1;
+          margin-bottom: 15px;
+
+          @media (min-width: 576px) {
+            font-size: 18px;
+          }
+        }
+        p {
+          font-family: 'PT Serif', serif;
+          font-size: 11px;
+          font-weight: 700;
+          margin-bottom: 0;
+          padding-right: 0;
+
+          @media (min-width: 576px) {
+            font-size: 17px;
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+sidebar {
+
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    //min-height: 770px;
+
+    @media (min-width: 576px) {
+      height: calc(100vh - 80px);
+    }
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 44px;
+      background: red;
+      opacity: 1;
+
+      &.active {
+        background: black;
+      }
+    }
+  }
+}

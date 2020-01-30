@@ -1,0 +1,276 @@
+.container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container-flex {
+  display: flex;
+  width: 100vw;
+
+  .container-fluid {
+    width: 100%;
+
+    @media (min-width: 576px) {
+      width: calc(100% - 80px);
+    }
+  }
+
+  sidebar {
+    width: 80px;
+    margin-top: 80px;
+    display: none;
+
+    @media (min-width: 576px) {
+      display: block;
+    }
+  }
+}
+.desktop-bar {
+  background: white;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 20px 30px;
+
+  @media (min-width: 576px) {
+    display: flex;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+
+    svg {
+
+      rect {
+        fill: red;
+      }
+    }
+  }
+}
+
+.top {
+  background-size: cover;
+  background-position: 10%;
+  background-blend-mode: multiply;
+  filter: brightness(1.5);
+  min-height: 340px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: 576px) {
+    padding: 0;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    display: block;
+    z-index: 21;
+
+    @media (min-width: 576px) {
+      display: none;
+    }
+
+    svg {
+
+      rect {
+        fill: white;
+      }
+    }
+  }
+
+  .menu {
+    z-index: 21;
+  }
+}
+
+/* Carousel */
+.carousel {
+  background: #ff0000;
+  padding: 63px 0 15px 15px;
+  position: relative;
+  margin-top: -45px;
+
+  @media (min-width: 576px) {
+    padding: 63px 180px 15px 150px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    border-style: solid;
+    border-width: 0 100vw 70px 0;
+    border-color: transparent #ff0000 transparent transparent;
+    width: 0;
+    height: 0;
+    z-index: 9;
+
+    @media (min-width: 576px) {
+      border-width: 0 calc(100vw - 80px) 70px 0;
+    }
+  }
+
+  h1 {
+    font-size: 20px;
+    color: white;
+    padding: 20px 5px 25px;
+    font-weight: 700;
+    margin: 0;
+
+    @media (min-width: 576px) {
+      font-size: 26px;
+    }
+  }
+}
+/* fin Carousel */
+
+/* Txt */
+.phone {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  position: relative;
+  margin-top: 0;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    margin-top: 25px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 0 100vw 255px 0;
+    border-color: transparent white transparent transparent;
+    width: 0;
+    height: 0;
+
+    @media (min-width: 992px) {
+      top: 16px;
+    }
+    @media (min-width: 1200px) {
+      top: 0px;
+    }
+  }
+
+  .img {
+    background: url('../img/adventure-blur-cellphone-2765873.jpg') no-repeat 30%;
+    background-size: 110%;
+    width: 100%;
+    height: 300px;
+
+    @media (min-width: 576px) {
+      width: 48%;
+      height: 780px;
+    }
+  }
+
+  .txt {
+    position: relative;
+    padding: 0px 20px 0;
+    width: 97%;
+    margin-bottom: -50px;
+
+    @media (min-width: 576px) {
+      width: 52%;
+      margin-bottom: 0;
+      padding: 75px 36px 0 50px;
+      margin-left: -100px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -65px;
+      left: 0;
+      border-style: solid;
+      border-width: 0 100vw 115px 0;
+      border-color: transparent white transparent transparent;
+      width: 0;
+      height: 0;
+
+      @media (min-width: 576px) {
+        top: 82px;
+        right: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 100px 100vh 0;
+        border-color: transparent white transparent transparent;
+        bottom: auto;
+        left: 0;
+      }
+    }
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 167px solid transparent;
+      border-right: 167px solid transparent;
+      float: left;
+      shape-outside: polygon(0px 108px, 0px 190px, 199px 190px);
+
+      @media (min-width: 576px) {
+        border-bottom: 300px solid transparent;
+        border-right: 100px solid transparent;
+        shape-outside: polygon(0px 0, 0px 100vh, 160px 100vh);
+      }
+    }
+
+    h2 {
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 700;
+      margin: 50px 0 0;
+      z-index: 9;
+      position: relative;
+    }
+    p {
+      font-family: 'PT Serif', serif;
+      font-size: 14px;
+      line-height: 19px;
+      margin: 0;
+      z-index: 5;
+      position: relative;
+
+      br {
+        display: unset;
+
+        @media (min-width: 576px) {
+          display: none;
+        }
+
+        &.br-dt {
+          display: none;
+
+          @media (min-width: 576px) {
+            display: unset;
+          }
+        }
+      }
+
+      span {
+
+        &.more {
+          display: none;
+
+          @media (min-width: 576px) {
+            display: unset;
+          }
+        }
+      }
+    }
+  }
+
+}
